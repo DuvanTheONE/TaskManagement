@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #3f3f3f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-container {
+    background: #2A2D32;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Register-New-User {
+    margin-bottom: 10px;
+    color: #e8f0e8;
+    font-size: 1.8rem;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #676b75;
+    margin-bottom: 10px;
+    margin: 5px 0px 5px 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    background: #2A2D32;
+    border: 2px solid #4D515B;
+    border-radius: 15px;
+    padding: 15px;
+    color: #878c98;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #676b75;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #5390d9;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.15);
+    transform: scale(1.02);
+}
+
+.btn-submit-register-user {
+    width: 150px;
+    background: #3662E3;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn-submit-register-user:hover {
+    background: linear-gradient(135deg, #5e60ce, #6930c3);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.Back-to {
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 15px 20px;
+    border: 2px solid #676b75;
+    color: #676b75;
+    text-decoration: none;
+    margin-left: 15px;
+    width: 120px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.Back-to:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #48bfe3, #5390d9);
+    border-color: #5390d9;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+input[type="radio"] {
+    justify-content: left;
+    display: none;
+}
+
+input[type="radio"] + img {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    transition: all ease .5s;
+}
+
+input[type="radio"]:checked + img {
+    width: 40px;
+    height: 40px;
+}
+
+.profile-image-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.error, .success {
+    color: #FF0000;
+    background: #ffd2d2;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.success {
+    color: #008000;
+    background: #c2f0c2;
+}
+
+::placeholder {
+    color: #ccc;
+}
+
+label.profile-image-label {
+    display: inline-block;
+    position: relative;
+}
+
+label.profile-image-label:hover input[type="radio"] + img {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transform: scale(1.1);
+}
+
+.error, .success {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}

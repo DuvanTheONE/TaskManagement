@@ -1,0 +1,18 @@
+{
+    "name": "duvan/task_manager_proyecto_6to_semestre",
+    "description": "App para gestionar tareas.",
+    "type": "project",
+    "license": "GPL",
+    "autoload": {
+        "psr-4": {
+            "Duvan\\TaskManagerProyecto6toSemestre\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Duvan Alfonso Mesa"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
