@@ -5,11 +5,11 @@ namespace Models;
 
 use PDO;
 use PDOException;
-use Models\UserNotFoundException;
-use Models\UserCreationException;
-use Models\UserUpdateException;
-use Models\UserDeletionException;
-use Models\AuthenticationException;
+use Models\exceptions\UserNotFoundException;
+use Models\exceptions\UserCreationException;
+use Models\exceptions\UserUpdateException;
+use Models\exceptions\UserDeletionException;
+use Models\exceptions\AuthenticationException;
 
 class User
 {
@@ -133,5 +133,4 @@ class User
             throw new AuthenticationException("Error en la autenticación del usuario.");
         }
     }
-
 }

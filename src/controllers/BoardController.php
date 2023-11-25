@@ -28,4 +28,14 @@ class BoardController
     {
         return $this->boardModel->deleteBoard($id);
     }
+
+    public function  show($id)
+    {
+        return $this->boardModel->getBoardById($id);
+    }
+
+    public function update($id, $name, $logo = null)
+    {
+        return $this->boardModel->updateBoard($id, $name, $logo);
+    }
 }

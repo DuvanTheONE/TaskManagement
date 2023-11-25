@@ -5,7 +5,9 @@
     "license": "GPL",
     "autoload": {
         "psr-4": {
-            "Duvan\\TaskManagerProyecto6toSemestre\\": "src/"
+            "Models\\": "src/models/",
+            "Controllers\\": "src/controllers/",
+            "Models\\exceptions\\": "src/models/exceptions/"
         }
     },
     "authors": [
@@ -14,5 +16,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "firebase/php-jwt": "^6.9"
+    }
 }

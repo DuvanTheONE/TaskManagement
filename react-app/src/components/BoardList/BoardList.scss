@@ -1,0 +1,119 @@
+.board-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+
+    .board {
+        position: relative;
+        color: white;
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: all ease .3s;
+
+        &:hover, &.selected {
+            background-color: #2A2D32; 
+            border: 2px solid #3562E3;
+        }
+
+        .board-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .board-name {
+            flex-grow: 1;
+            font-weight: bold;
+        }
+
+        .options-button {
+            width: 15px; 
+            height: 15px;
+            margin-left: auto; 
+            order: 2;
+            cursor: pointer;
+        }
+
+        .board-actions {
+            z-index: 10; 
+            display: none; 
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: #232427;
+            border-radius: 5px;
+            padding: 5px;
+            flex-direction: column;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+            button {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                background: none;
+                border: none;
+                color: white;
+                margin: 5px 0; 
+                cursor: pointer;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #3562E3; 
+                }
+
+                img {
+                    margin-right: 10px;
+                    width: 15px; 
+                    height: 15px;
+                }
+
+                p {
+                    letter-spacing: 2px;
+                }
+
+                .rojo {
+                    color: #B10000;
+                }
+            }
+        }
+
+        &.selected .board-actions {
+            display: flex; // Mostrar cuando el .board está seleccionado
+        }
+
+        .icon-selector {
+            display: none; // Inicialmente oculto
+            position: absolute;
+            top: 50px;
+            right: 0;
+            background-color: #202020;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            z-index: 20;
+
+                .icon-image {
+                    padding: 5px;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+                    transition: transform 0.3s ease;
+
+                    &:hover {
+                        transform: scale(1.1);
+                        opacity: 0.7;
+                    }
+                }
+            
+        }
+
+        &.selected .icon-selector {
+            display: block;
+        }
+    }
+}

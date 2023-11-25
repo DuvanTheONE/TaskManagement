@@ -1,0 +1,24 @@
+.board{
+    border-radius: 30px;
+    background: #232427;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .board-column{
+        color: #ECF0F1;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 24%;
+    }
+
+    button{
+        background: #C3DAFA;
+        border-radius: 20px;
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+    }
+}

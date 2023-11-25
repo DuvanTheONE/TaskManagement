@@ -6,5 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Duvan\\TaskManagerProyecto6toSemestre\\' => array($baseDir . '/src'),
+    'Models\\exceptions\\' => array($baseDir . '/src/models/exceptions'),
+    'Models\\' => array($baseDir . '/src/models'),
+    'Firebase\\JWT\\' => array($vendorDir . '/firebase/php-jwt/src'),
+    'Controllers\\' => array($baseDir . '/src/controllers'),
 );

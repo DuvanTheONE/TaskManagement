@@ -1,0 +1,13 @@
+$color-secondary: #2A2D32;
+$color-text: #ECF0F1;
+$color-background: #1A1B1F;
+$color-hover-active-board: #3562E3;
+
+.dashboard {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+    background-color: $color-background;
+}

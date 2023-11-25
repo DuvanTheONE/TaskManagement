@@ -2,15 +2,15 @@
 
 define('BASE_PATH', realpath(dirname(__FILE__) . '/../..'));
 
-require_once BASE_PATH . '/models/Users.php';
-require_once BASE_PATH . '/models/UserExceptions.php';
+require_once '../models/Users.php';
+require_once '../models/exceptions/UserExceptions.php';
 
 use Models\User;
-use Models\AuthenticationException;
+use Models\exceptions;
+use Models\exceptions\AuthenticationException;
 
 session_start();
 
-// Asegurarse de que solo se procesen las solicitudes POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: ' . BASE_PATH . '/views/login.php');
     exit;
@@ -26,18 +26,16 @@ $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 try {
     $user = $userModel->authenticate($username, $password);
 
-    // Regenerar ID de sesión para la seguridad de la sesión
     session_regenerate_id();
 
     $_SESSION['user_id'] = $user['id'];
     $_SESSION['username'] = $user['username'];
 
-    header('Location: ' . BASE_PATH . '/views/home.php');
+    header('Location: http://localhost:5173');
     exit;
 } catch (AuthenticationException $e) {
-    // Mensaje de error genérico para el usuario
     $_SESSION['error'] = "Usuario o contraseña incorrectos.";
-    header('Location: ' . BASE_PATH . '/views/login.php');
+    header('Location: ../views/login.php');
     exit;
 } catch (PDOException $e) {
     // Registra el error pero muestra un mensaje genérico al usuario
@@ -46,4 +44,3 @@ try {
     header('Location: ' . BASE_PATH . '/views/login.php');
     exit;
 }
-

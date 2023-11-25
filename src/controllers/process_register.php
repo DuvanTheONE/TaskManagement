@@ -2,7 +2,7 @@
 
 require_once '../Models/Users.php';
 use Models\User;
-use Models\UserCreationException;
+use Models\exceptions\UserCreationException;
 
 session_start();
 

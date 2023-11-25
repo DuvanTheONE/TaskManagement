@@ -1,6 +1,6 @@
 <?php
 
-namespace Models;
+namespace Models\exceptions;
 
 class UserException extends \Exception {}
 
